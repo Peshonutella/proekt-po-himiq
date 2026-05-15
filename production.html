@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Методи на получаване — Сребро (Ag)</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .method-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:1.5rem; position:relative; overflow:hidden; }
+    .method-card::before { content:attr(data-num); position:absolute; right:1rem; top:.5rem; font-size:4rem; font-weight:900; color:rgba(192,192,192,.05); line-height:1; }
+    .method-card:hover { border-color:rgba(192,192,192,.2); }
+    .method-step { font-size:.8rem; font-weight:700; color:var(--silver); text-transform:uppercase; letter-spacing:.08em; margin-bottom:.45rem; }
+    .method-title { font-size:1.05rem; font-weight:700; color:var(--text-primary); margin-bottom:.45rem; }
+    .method-text { font-size:.875rem; color:var(--text-secondary); }
+    .flow { display:flex; align-items:center; gap:.5rem; flex-wrap:wrap; margin:1.5rem 0; }
+    .flow-box { background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:.55rem .9rem; font-size:.78rem; font-weight:600; color:var(--text-secondary); text-align:center; }
+    .flow-box.hl { border-color:rgba(192,192,192,.3); color:var(--silver); background:rgba(192,192,192,.05); }
+    .flow-arrow { color:var(--text-muted); font-size:1.1rem; }
+    .img6 { display:grid; grid-template-columns:repeat(auto-fill, minmax(210px,1fr)); gap:1.25rem; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand"><div class="brand-badge">Ag</div><span class="brand-name">СРЕБРО</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Начало</a></li>
+      <li><a href="atom.html">Атом</a></li>
+      <li><a href="nature.html">Природа</a></li>
+      <li><a href="physical.html">Физични</a></li>
+      <li><a href="chemical.html">Химични</a></li>
+      <li><a href="biology.html">Биология</a></li>
+      <li><a href="production.html" class="active">Получаване</a></li>
+      <li><a href="ecology.html">Екология</a></li>
+      <li><a href="applications.html">Приложения</a></li>
+      <li><a href="prices.html">Цени</a></li>
+      <li><a href="sources.html">Източници</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="page-header">
+  <span class="cat-badge">Категория 07</span>
+  <h1>Методи на получаване</h1>
+  <p>От руда до чисто сребро — основните промишлени методи за добив и рафиниране.</p>
+</header>
+
+<div class="container">
+
+  <div class="stats">
+    <div class="stat"><div class="stat-val">~27 000</div><div class="stat-lbl">тона/год.</div></div>
+    <div class="stat"><div class="stat-val">99.99%</div><div class="stat-lbl">Чистота след електролиза</div></div>
+    <div class="stat"><div class="stat-val">3</div><div class="stat-lbl">Основни метода</div></div>
+    <div class="stat"><div class="stat-val">Паркс</div><div class="stat-lbl">Исторически метод</div></div>
+  </div>
+
+  <!-- СРЕБЪРНА МИНА — МНОГО СНИМКИ -->
+  <div class="section">
+    <h2 class="section-title">Сребърна мина</h2>
+    <div class="wide-img-wrap">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Cerro_ricco.jpg/1280px-Cerro_ricco.jpg" alt="Cerro Rico — Потоси, Боливия" style="max-height:380px;" onerror="this.outerHTML='<div class=\'img-ph\' style=\'height:380px;\'>Открита сребърна мина</div>'">
+      <div class="cap">Открита рудна мина за добив на сребърна руда</div>
+    </div>
+    <div class="img6" style="margin-top:1.5rem;">
+      <div class="card">
+        <img src="https://www.bloombergtv.bg/media/files/images/original/article/cd2/a3c86a431a9a23476e7947b17b566cd2-397876082.jpg" alt="Сребърна руда — открит добив" class="card-img" onerror="this.outerHTML='<div class=\'img-ph\'>Открита рудна мина</div>'">
+        <div class="card-body"><div class="card-title">Открит добив</div><div class="card-text">Повечето съвременни мини са открити (open-pit). Взривяват се скали и се извозва руда.</div></div>
+      </div>
+      <div class="card">
+        <img src="https://pernik.bg/wp-content/uploads/2020/01/6-1170x725.jpg" alt="Подземна сребърна мина" class="card-img" onerror="this.outerHTML='<div class=\'img-ph\'>Подземна мина</div>'">
+        <div class="card-body"><div class="card-title">Подземен добив</div><div class="card-text">При богати и дълбоки находища се прилага подземен тунелен добив.</div></div>
+      </div>
+      <div class="card">
+        <img src="https://zdrave.to/media/source/202109/1630965942_po4.jpg" alt="Cerro Rico — Потоси" class="card-img" onerror="this.outerHTML='<div class=\'img-ph\'>Потоси — Боливия</div>'">
+        <div class="card-body"><div class="card-title">Потоси, Боливия</div><div class="card-text">Исторически символ на сребърния добив. Активна мина от 1545 г. до днес.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ПРОМИШЛЕНИ МЕТОДИ -->
+  <div class="section">
+    <h2 class="section-title">Промишлени методи</h2>
+    <div class="g2">
+      <div class="method-card" data-num="1">
+        <div class="method-step">Метод 01</div>
+        <div class="method-title">Цианидиране</div>
+        <div class="method-text">Най-разпространеният съвременен метод. Сребро се извлича чрез реакция с NaCN.</div>
+        <div class="formula" style="margin-top:1rem;font-size:.82rem;">4Ag + 8NaCN + O₂ + 2H₂O → 4Na[Ag(CN)₂] + 4NaOH<br>2Na[Ag(CN)₂] + Zn → Na₂[Zn(CN)₄] + 2Ag↓</div>
+      </div>
+      <div class="method-card" data-num="2">
+        <div class="method-step">Метод 02</div>
+        <div class="method-title">Електролитно рафиниране</div>
+        <div class="method-text">Получава изключително чисто сребро (99.99%). Нечисто Ag е анод, чистото се отлага на катода.</div>
+        <div class="formula" style="margin-top:1rem;font-size:.82rem;">Анод: Ag − e⁻ → Ag⁺<br>Катод: Ag⁺ + e⁻ → Ag (99.99% чисто)</div>
+      </div>
+      <div class="method-card" data-num="3">
+        <div class="method-step">Метод 03</div>
+        <div class="method-title">Метод на Паркс</div>
+        <div class="method-text">Исторически метод. Добавя се Zn към разтопено олово — Ag преминава в Zn-сплав и се отделя.</div>
+        <div class="formula" style="margin-top:1rem;font-size:.82rem;">Ag(в Pb) + Zn → Ag·Zn(сплав) → Zn дестилира → Ag</div>
+      </div>
+      <div class="method-card" data-num="4">
+        <div class="method-step">Метод 04</div>
+        <div class="method-title">Страничен продукт</div>
+        <div class="method-text">~70% от световното производство е страничен продукт при топене на Cu, Pb и Zn.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ПРОИЗВОДСТВЕНА ВЕРИГА -->
+  <div class="section">
+    <h2 class="section-title">Производствена верига</h2>
+    <div class="flow">
+      <div class="flow-box">Ag₂S руда</div><div class="flow-arrow">→</div>
+      <div class="flow-box">Смилане</div><div class="flow-arrow">→</div>
+      <div class="flow-box">NaCN + O₂</div><div class="flow-arrow">→</div>
+      <div class="flow-box">Цинково утаяване</div><div class="flow-arrow">→</div>
+      <div class="flow-box">Топене</div><div class="flow-arrow">→</div>
+      <div class="flow-box hl">Електролиза → 99.99% Ag</div>
+    </div>
+  </div>
+
+  <!-- ПРОИЗВОДСТВО В СНИМКИ -->
+  <div class="section">
+    <h2 class="section-title">Производство в снимки</h2>
+    <div class="img6">
+      <div class="card">
+        <img src="https://siman.bg/wp-content/uploads/2024/05/nickel-1.png" alt="Чисто рафинирано сребро" class="card-img" onerror="this.outerHTML='<div class=\'img-ph\'>Сребърни аноди</div>'">
+        <div class="card-body"><div class="card-title">Сребърни аноди</div><div class="card-text">Аноди за електролитно рафиниране — от тях Ag⁺ преминава към катода.</div></div>
+      </div>
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFdCCkn9JsGofBJBUQE-FE9G-oF1x3GTwaOQ&s" alt="Сребърна блока 999 fine" class="card-img" onerror="this.outerHTML='<div class=\'img-ph\'>Сребърна блока 999</div>'">
+        <div class="card-body"><div class="card-title">Сребърна блока</div><div class="card-text">Крайният продукт — 999 fine silver блока след рафиниране.</div></div>
+      </div>
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIqqJE9OuCrjq1It5I27M4fe5D9ulLKcAwKA&s" alt="Сребърни слитъци" class="card-img" onerror="this.outerHTML='<div class=\'img-ph\'>Сребърни слитъци</div>'">
+        <div class="card-body"><div class="card-title">Сребърни слитъци</div><div class="card-text">Стандартни 1000 oz слитъци — борсово търгувани под ticker XAG.</div></div>
+      </div>
+      <div class="card">
+        <img src="https://external-preview.redd.it/i-work-in-the-largest-copper-mine-in-north-america-heres-a-v0-ltch0zIVBaYvTKTrKGOgvwYxkG1L6Nba0hVyjU7nqLo.jpg?width=640&crop=smart&auto=webp&s=ba7cc3f38d1b420f5dec1c02bb2bbc13dee0088f" alt="Голям сребърен самородок" class="card-img" onerror="this.outerHTML='<div class=\'img-ph\'>Страничен добив при Cu мина</div>'">
+        <div class="card-body"><div class="card-title">Cu + Ag добив</div><div class="card-text">Медните мини в Чили и Перу са сред главните доставчици на вторично сребро.</div></div>
+      </div>
+      <div class="card">
+        <img src="https://plc-lab.com/wp-content/uploads/2022/01/9-2.jpg" alt="Исторически добив на сребро" class="card-img" onerror="this.outerHTML='<div class=\'img-ph\'>Топилна пещ за метали</div>'">
+        <div class="card-body"><div class="card-title">Топилна пещ</div><div class="card-text">Пирометалургичното топене е първият етап преди хидрометалургичното извличане.</div></div>
+      </div>
+      <div class="card">
+        <img src="https://domashno.bg/get_image/9fdeaff8-19f7-4893-b10f-89ecd2b08eea?timestamp=1757825945" alt="Електролиза — Ag утаяване" class="card-img" onerror="this.outerHTML='<div class=\'img-ph\'>Електролизна клетка</div>'">
+        <div class="card-body"><div class="card-title">Електролизна клетка</div><div class="card-text">Моебиус клетка — индустриален стандарт за електролитно рафиниране на Ag.</div></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="les-notions">
+  <div class="ln-inner">
+    <div class="ln-title">Les notions</div>
+    <div class="ln-grid">
+      <div class="ln-item"><div class="ln-bg">Метод на извличане</div><div class="ln-fr">Méthode d'extraction</div></div>
+      <div class="ln-item"><div class="ln-bg">Електролиза</div><div class="ln-fr">Électrolyse</div></div>
+      <div class="ln-item"><div class="ln-bg">Рафиниране</div><div class="ln-fr">Raffinage</div></div>
+      <div class="ln-item"><div class="ln-bg">Цианидиране</div><div class="ln-fr">Cyanuration</div></div>
+      <div class="ln-item"><div class="ln-bg">Руда</div><div class="ln-fr">Minerai</div></div>
+      <div class="ln-item"><div class="ln-bg">Топилня</div><div class="ln-fr">Fonderie</div></div>
+      <div class="ln-item"><div class="ln-bg">Анод</div><div class="ln-fr">Anode</div></div>
+      <div class="ln-item"><div class="ln-bg">Катод</div><div class="ln-fr">Cathode</div></div>
+      <div class="ln-item"><div class="ln-bg">Страничен продукт</div><div class="ln-fr">Sous-produit</div></div>
+      <div class="ln-item"><div class="ln-bg">Утаяване</div><div class="ln-fr">Précipitation</div></div>
+      <div class="ln-item"><div class="ln-bg">Смилане</div><div class="ln-fr">Broyage</div></div>
+      <div class="ln-item"><div class="ln-bg">Концентрат</div><div class="ln-fr">Concentré</div></div>
+    </div>
+  </div>
+</footer>
+<footer class="site-footer">Сребро (Ag) · Методи на получаване · <a href="biology.html">← Биология</a> · <a href="ecology.html">Екология →</a></footer>
+</body>
+</html>

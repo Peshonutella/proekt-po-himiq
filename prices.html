@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Цена на среброто — Сребро (Ag)</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .chart-wrap {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      padding: 0;
+    }
+    .chart-wrap iframe,
+    .chart-inner { width: 100%; }
+    .ticker-wrap {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+    .mini-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.25rem;
+    }
+    .mini-chart-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .price-context { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); gap: 1rem; }
+    .pc-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; }
+    .pc-label { font-size: .72rem; font-weight: 700; color: var(--silver); text-transform: uppercase; letter-spacing: .1em; margin-bottom: .4rem; }
+    .pc-val { font-size: 1.4rem; font-weight: 800; color: var(--text-primary); margin-bottom: .25rem; }
+    .pc-sub { font-size: .78rem; color: var(--text-secondary); }
+    .pc-note { font-size: .7rem; color: var(--text-muted); margin-top: .4rem; }
+    .market-info { background: rgba(192,192,192,.04); border: 1px solid rgba(192,192,192,.1); border-radius: var(--radius); padding: 1.25rem 1.5rem; font-size: .85rem; color: var(--text-secondary); line-height: 1.7; }
+    .market-info strong { color: var(--silver-light); }
+    .tv-credit { font-size: .7rem; color: var(--text-muted); text-align: center; padding: .5rem; }
+    .tv-credit a { color: var(--silver-dark); }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand"><div class="brand-badge">Ag</div><span class="brand-name">СРЕБРО</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Начало</a></li>
+      <li><a href="atom.html">Атом</a></li>
+      <li><a href="nature.html">Природа</a></li>
+      <li><a href="physical.html">Физични</a></li>
+      <li><a href="chemical.html">Химични</a></li>
+      <li><a href="biology.html">Биология</a></li>
+      <li><a href="production.html">Получаване</a></li>
+      <li><a href="ecology.html">Екология</a></li>
+      <li><a href="applications.html">Приложения</a></li>
+      <li><a href="prices.html" class="active">Цени</a></li>
+      <li><a href="sources.html">Източници</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="page-header">
+  <span class="cat-badge">Live пазарни данни</span>
+  <h1>Цена на среброто</h1>
+  <p>Реални котировки XAG/USD — спот цена, графики и пазарен контекст.</p>
+</header>
+
+<div class="container">
+
+  <!-- ПАЗАРЕН КОНТЕКСТ — статични факти -->
+  <div class="stats">
+    <div class="stat"><div class="stat-val">XAG</div><div class="stat-lbl">Борсов тикер</div></div>
+    <div class="stat"><div class="stat-val">USD/oz</div><div class="stat-lbl">Котировка</div></div>
+    <div class="stat"><div class="stat-val">1 troy oz</div><div class="stat-lbl">= 31.1035 г</div></div>
+    <div class="stat"><div class="stat-val">COMEX</div><div class="stat-lbl">Фючърсна борса</div></div>
+    <div class="stat"><div class="stat-val">LBMA</div><div class="stat-lbl">Лондонски фиксинг</div></div>
+    <div class="stat"><div class="stat-val">~1:80</div><div class="stat-lbl">Злато/сребро коефициент</div></div>
+  </div>
+
+  <!-- ТИКЕР ЛЕНТА — множество метали -->
+  <div class="section">
+    <h2 class="section-title">Благородни метали — Live котировки</h2>
+    <div class="ticker-wrap">
+      <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+        {
+          "symbols": [
+            {"proName": "OANDA:XAGUSD", "title": "Сребро (XAG/USD)"},
+            {"proName": "OANDA:XAUUSD", "title": "Злато (XAU/USD)"},
+            {"proName": "COMEX:SI1!", "title": "Silver Futures"},
+            {"proName": "OANDA:XPTUSD", "title": "Платина"},
+            {"proName": "OANDA:XPDUSD", "title": "Паладий"},
+            {"proName": "TVC:SILVER",   "title": "Silver Index"}
+          ],
+          "showSymbolLogo": false,
+          "colorTheme": "dark",
+          "isTransparent": true,
+          "displayMode": "adaptive",
+          "locale": "bg"
+        }
+        </script>
+      </div>
+    </div>
+  </div>
+
+  <!-- ГЛАВНА ГРАФИКА XAG/USD -->
+  <div class="section">
+    <h2 class="section-title">XAG/USD — Графика на спот цената</h2>
+    <div class="chart-wrap" style="height:520px;">
+      <div class="tradingview-widget-container" style="height:100%;">
+        <div id="tradingview_xagusd" style="height:488px;"></div>
+        <div class="tv-credit"><a href="https://www.tradingview.com/" target="_blank" rel="noopener">Графиките се предоставят от TradingView</a></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+        <script type="text/javascript">
+        new TradingView.widget({
+          "autosize": true,
+          "symbol": "OANDA:XAGUSD",
+          "interval": "D",
+          "timezone": "Europe/Sofia",
+          "theme": "dark",
+          "style": "1",
+          "locale": "bg",
+          "toolbar_bg": "#161616",
+          "enable_publishing": false,
+          "allow_symbol_change": true,
+          "save_image": false,
+          "hide_top_toolbar": false,
+          "hide_legend": false,
+          "container_id": "tradingview_xagusd"
+        });
+        </script>
+      </div>
+    </div>
+  </div>
+
+  <!-- МИНИ ГРАФИКИ — Сравнение с злато и платина -->
+  <div class="section">
+    <h2 class="section-title">Сравнение с други благородни метали</h2>
+    <div class="mini-grid">
+
+      <div class="mini-chart-box">
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+          {
+            "symbol": "OANDA:XAGUSD",
+            "width": "100%",
+            "height": "220",
+            "locale": "bg",
+            "dateRange": "12M",
+            "colorTheme": "dark",
+            "isTransparent": true,
+            "autosize": true,
+            "largeChartUrl": ""
+          }
+          </script>
+        </div>
+      </div>
+
+      <div class="mini-chart-box">
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+          {
+            "symbol": "OANDA:XAUUSD",
+            "width": "100%",
+            "height": "220",
+            "locale": "bg",
+            "dateRange": "12M",
+            "colorTheme": "dark",
+            "isTransparent": true,
+            "autosize": true,
+            "largeChartUrl": ""
+          }
+          </script>
+        </div>
+      </div>
+
+      <div class="mini-chart-box">
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+          {
+            "symbol": "OANDA:XPTUSD",
+            "width": "100%",
+            "height": "220",
+            "locale": "bg",
+            "dateRange": "12M",
+            "colorTheme": "dark",
+            "isTransparent": true,
+            "autosize": true,
+            "largeChartUrl": ""
+          }
+          </script>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ФЮЧЪРСИ COMEX -->
+  <div class="section">
+    <h2 class="section-title">Silver Futures — COMEX</h2>
+    <div class="chart-wrap" style="height:420px;">
+      <div class="tradingview-widget-container" style="height:100%;">
+        <div id="tradingview_comex" style="height:388px;"></div>
+        <div class="tv-credit"><a href="https://www.tradingview.com/" target="_blank" rel="noopener">TradingView</a></div>
+        <script type="text/javascript">
+        new TradingView.widget({
+          "autosize": true,
+          "symbol": "COMEX:SI1!",
+          "interval": "W",
+          "timezone": "Europe/Sofia",
+          "theme": "dark",
+          "style": "1",
+          "locale": "bg",
+          "toolbar_bg": "#161616",
+          "enable_publishing": false,
+          "allow_symbol_change": false,
+          "save_image": false,
+          "container_id": "tradingview_comex"
+        });
+        </script>
+      </div>
+    </div>
+  </div>
+
+  <!-- ПАЗАРЕН КОНТЕКСТ -->
+  <div class="section">
+    <h2 class="section-title">Пазарен контекст</h2>
+    <div class="price-context">
+      <div class="pc-card">
+        <div class="pc-label">Историческо дъно</div>
+        <div class="pc-val">~$3.55</div>
+        <div class="pc-sub">февруари 1993 г.</div>
+        <div class="pc-note">Най-ниската записана спот цена в съвременната история.</div>
+      </div>
+      <div class="pc-card">
+        <div class="pc-label">Историческо дъно</div>
+        <div class="pc-val">~$49.51</div>
+        <div class="pc-sub">април 2011 г.</div>
+        <div class="pc-note">Близо до рекорда от 1980 г. ($49.45 — манипулация от братята Хънт).</div>
+      </div>
+      <div class="pc-card">
+        <div class="pc-label">Коефициент злато/сребро</div>
+        <div class="pc-val">~1:80</div>
+        <div class="pc-sub">исторически средно</div>
+        <div class="pc-note">Показва колко унции сребро са нужни за 1 унция злато.</div>
+      </div>
+      <div class="pc-card">
+        <div class="pc-label">Търсене — Индустрия</div>
+        <div class="pc-val">~50%</div>
+        <div class="pc-sub">от световното потребление</div>
+        <div class="pc-note">Електроника, слънчеви панели и медицина.</div>
+      </div>
+      <div class="pc-card">
+        <div class="pc-label">Търсене — Инвестиции</div>
+        <div class="pc-val">~25%</div>
+        <div class="pc-sub">монети и блокове</div>
+        <div class="pc-note">ETF-и, физическо сребро и фючърси.</div>
+      </div>
+      <div class="pc-card">
+        <div class="pc-label">Основна борса</div>
+        <div class="pc-val">COMEX</div>
+        <div class="pc-sub">New York (CME Group)</div>
+        <div class="pc-note">LBMA (Лондон) определя дневния фиксинг на цената.</div>
+      </div>
+    </div>
+    <div class="market-info" style="margin-top:1.5rem;">
+      <strong>Защо цената на среброто се колебае?</strong> Среброто е едновременно <strong>промишлен метал</strong> (фотоволтаици, електроника, медицина — ~50% от търсенето) и <strong>инвестиционен актив</strong> (монети, ETF, фючърси). Двойната му роля го прави по-волатилен от златото. Ускореното развитие на <strong>слънчевата енергетика</strong> увеличава промишленото търсене и влияе значително върху дългосрочната цена.
+    </div>
+  </div>
+
+</div>
+
+<footer class="les-notions">
+  <div class="ln-inner">
+    <div class="ln-title">Les notions</div>
+    <div class="ln-grid">
+      <div class="ln-item"><div class="ln-bg">Спот цена</div><div class="ln-fr">Prix spot</div></div>
+      <div class="ln-item"><div class="ln-bg">Фючърс</div><div class="ln-fr">Contrat à terme</div></div>
+      <div class="ln-item"><div class="ln-bg">Тройунция</div><div class="ln-fr">Once troy</div></div>
+      <div class="ln-item"><div class="ln-bg">Борса</div><div class="ln-fr">Bourse</div></div>
+      <div class="ln-item"><div class="ln-bg">Котировка</div><div class="ln-fr">Cotation</div></div>
+      <div class="ln-item"><div class="ln-bg">Инвестиция</div><div class="ln-fr">Investissement</div></div>
+      <div class="ln-item"><div class="ln-bg">Волатилност</div><div class="ln-fr">Volatilité</div></div>
+      <div class="ln-item"><div class="ln-bg">Благороден метал</div><div class="ln-fr">Métal précieux</div></div>
+      <div class="ln-item"><div class="ln-bg">Коефициент</div><div class="ln-fr">Ratio</div></div>
+      <div class="ln-item"><div class="ln-bg">Фиксинг</div><div class="ln-fr">Fixing</div></div>
+      <div class="ln-item"><div class="ln-bg">Пазарна стойност</div><div class="ln-fr">Valeur marchande</div></div>
+      <div class="ln-item"><div class="ln-bg">Търсене</div><div class="ln-fr">Demande</div></div>
+    </div>
+  </div>
+</footer>
+<footer class="site-footer">Сребро (Ag) · Цена на среброто · <a href="applications.html">← Приложения</a> · <a href="sources.html">Източници →</a></footer>
+</body>
+</html>

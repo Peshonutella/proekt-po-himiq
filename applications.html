@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Приложения — Сребро (Ag)</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .app-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; transition:all .2s; }
+    .app-card:hover { border-color:rgba(192,192,192,.25); transform:translateY(-3px); }
+    .app-img { width:100%; height:195px; object-fit:cover; display:block; background:var(--bg-secondary); }
+    .app-body { padding:1.1rem 1.35rem; }
+    .app-tag { display:inline-block; background:rgba(192,192,192,.08); color:var(--silver-dark); border:1px solid rgba(192,192,192,.15); padding:.15rem .5rem; border-radius:4px; font-size:.68rem; font-weight:600; text-transform:uppercase; letter-spacing:.08em; margin-bottom:.45rem; }
+    .app-title { font-size:.95rem; font-weight:700; color:var(--silver-light); margin-bottom:.3rem; }
+    .app-text { font-size:.82rem; color:var(--text-secondary); }
+    .usage-pct { font-size:1.5rem; font-weight:800; background:var(--silver-grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; display:block; margin-bottom:.2rem; }
+    .img6 { display:grid; grid-template-columns:repeat(auto-fill, minmax(210px,1fr)); gap:1.25rem; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand"><div class="brand-badge">Ag</div><span class="brand-name">СРЕБРО</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Начало</a></li>
+      <li><a href="atom.html">Атом</a></li>
+      <li><a href="nature.html">Природа</a></li>
+      <li><a href="physical.html">Физични</a></li>
+      <li><a href="chemical.html">Химични</a></li>
+      <li><a href="biology.html">Биология</a></li>
+      <li><a href="production.html">Получаване</a></li>
+      <li><a href="ecology.html">Екология</a></li>
+      <li><a href="applications.html" class="active">Приложения</a></li>
+      <li><a href="prices.html">Цени</a></li>
+      <li><a href="sources.html">Източници</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="page-header">
+  <span class="cat-badge">Категория 10</span>
+  <h1>Приложения</h1>
+  <p>От космически сонди до бижутерия — среброто е незаменим материал в десетки индустрии.</p>
+</header>
+
+<div class="container">
+
+  <div class="stats">
+    <div class="stat"><div class="stat-val">56%</div><div class="stat-lbl">Промишлени употреби</div></div>
+    <div class="stat"><div class="stat-val">25%</div><div class="stat-lbl">Бижутерия</div></div>
+    <div class="stat"><div class="stat-val">11%</div><div class="stat-lbl">Монети / инвестиции</div></div>
+    <div class="stat"><div class="stat-val">8%</div><div class="stat-lbl">Фотовол. панели</div></div>
+  </div>
+
+  <!-- СРЕБЪРНИ БЛОКЧЕТА — HERO + СНИМКИ -->
+  <div class="section">
+    <div class="wide-img-wrap">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/1000oz.silver.bullion.bar.top.jpg/1280px-1000oz.silver.bullion.bar.top.jpg" alt="Сребърни слитъци" style="max-height:360px;" onerror="this.outerHTML='<div class=\'img-ph\' style=\'height:360px;\'>Сребърни слитъци — инвестиционно сребро</div>'">
+      <div class="cap">Инвестиционни сребърни слитъци (999 fine silver) — борсово търгувани</div>
+    </div>
+  </div>
+
+  <!-- ЕЛЕКТРОНИКА & ТЕХНОЛОГИИ — МНОГО СНИМКИ -->
+  <div class="section">
+    <h2 class="section-title">Електроника &amp; Технологии</h2>
+    <div class="img6">
+      <div class="app-card">
+        <img src="https://shopdelta.eu/shop_image/product/easy-print_agt-028_d.jpg" alt="Печатни платки" class="app-img" onerror="this.outerHTML='<div class=\'img-ph app-img\'>Печатни платки — Ag пасти</div>'">
+        <div class="app-body"><span class="app-tag">Електроника</span><div class="app-title">Печатни платки</div><div class="app-text">Сребърни пасти в 90% от всички платки за запоявания и SMD компоненти.</div></div>
+      </div>
+      <div class="app-card">
+        <img src="https://topsolar-bg.com/wp-content/uploads/2021/03/%D0%A4%D0%BE%D1%82%D0%BE%D0%B2%D0%BE%D0%BB%D1%82%D0%B0%D0%B8%D1%87%D0%BD%D0%B8-%D0%BF%D0%B0%D0%BD%D0%B5%D0%BB%D0%B8.jpg" alt="Слънчеви панели" class="app-img" onerror="this.outerHTML='<div class=\'img-ph app-img\'>Фотоволтаични панели</div>'">
+        <div class="app-body"><span class="app-tag">Зелена енергия</span><div class="app-title">Слънчеви панели</div><div class="app-text">~20 г Ag/панел в токопроводящите електроди. Бързо растящо приложение.</div></div>
+      </div>
+      <div class="app-card">
+        <img src="https://industrialno.com/wp-content/uploads/2020/07/rfid_geit_anteni_industrialno-2.jpg" alt="Сребърна тел за RFID" class="app-img" onerror="this.outerHTML='<div class=\'img-ph app-img\'>RFID — Ag антени</div>'">
+        <div class="app-body"><span class="app-tag">RFID / IoT</span><div class="app-title">RFID антени</div><div class="app-text">Сребърното мастило се отпечатва върху пластмаса за RFID маркери и сензори.</div></div>
+      </div>
+      <div class="app-card">
+        <img src="https://cdncloudcart.com/46355/products/images/561/orno-ae-1303ggs-aglov-kontakt-s-2-otdelenia-suko-idealen-za-kuhna-ofis-i-raboten-plot-45-povarhnosten-montaz-3680w-16a-image_65e05f5f3a656_800x800.png?1709204681" alt="Ag атомна тел — контакти" class="app-img" onerror="this.outerHTML='<div class=\'img-ph app-img\'>Електрически контакти Ag</div>'">
+        <div class="app-body"><span class="app-tag">Контакти</span><div class="app-title">Ел. контакти</div><div class="app-text">Ag в прекъсвачи, реле и контакти — най-ниско съпротивление и устойчивост на дъгово горене.</div></div>
+      </div>
+      <div class="app-card">
+        <img src="https://mobisector.com/image/cache/KARCHER/MPH2437B_1-750x750.jpg.webp" alt="Сребро в смартфони" class="app-img" onerror="this.outerHTML='<div class=\'img-ph app-img\'>Смартфон ~0.2 г Ag</div>'">
+        <div class="app-body"><span class="app-tag">Мобилни</span><div class="app-title">Смартфони</div><div class="app-text">~0.2 г Ag/телефон в контакти, антени и конектори. Милиарди телефони годишно.</div></div>
+      </div>
+      <div class="app-card">
+        <img src="https://www.szdingtouch.com/Uploads/image/20250103/20250103220805_58018.png" alt="Сребро в touch screen" class="app-img" onerror="this.outerHTML='<div class=\'img-ph app-img\'>Touch screen — ITO + Ag</div>'">
+        <div class="app-body"><span class="app-tag">Дисплеи</span><div class="app-title">Сензорни екрани</div><div class="app-text">Ag нановлакна в прозрачни проводящи слоеве за touch-screen дисплеи.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- БИЖУТЕРИЯ & МОНЕТИ — СНИМКИ -->
+  <div class="section">
+    <h2 class="section-title">Бижутерия &amp; Монети</h2>
+    <div class="img6">
+      <div class="app-card">
+        <img src="https://mysilver.bg/categories/IMG_0380_15.jpg" alt="Сребърни бижута" class="app-img" onerror="this.outerHTML='<div class=\'img-ph app-img\'>Сребърни бижута</div>'">
+        <div class="app-body"><span class="app-tag">Бижутерия</span><div class="app-title">Бижута (925 sterling)</div><div class="app-text">~7000 т/год. Стандарт 925 = 92.5% Ag + 7.5% Cu за по-голяма твърдост.</div></div>
+      </div>
+      <div class="app-card">
+        <img src="https://img.tavex.bg/v7/_product_catalog_/1-oz-silver-coin-vat-on-margin-various-types/silver-all-front.jpg?height=960&width=960&func=cropfit" alt="Сребърни монети" class="app-img" onerror="this.outerHTML='<div class=\'img-ph app-img\'>Сребърни монети</div>'">
+        <div class="app-body"><span class="app-tag">Нумизматика</span><div class="app-title">Монети</div><div class="app-text">American Eagle, Maple Leaf, Britannia — 999 Ag инвестиционни монети.</div></div>
+      </div>
+      <div class="app-card">
+        <img src="https://cdn5.focus.bg/bazar/d2/pics/d27179e84af9ef0faa3b91d7071ebfb4.jpg" alt="Сребърни прибори" class="app-img" onerror="this.outerHTML='<div class=\'img-ph app-img\'>Сребърни столови прибори</div>'">
+        <div class="app-body"><span class="app-tag">Прибори</span><div class="app-title">Столови прибори</div><div class="app-text">Традиционни сребърни прибори — символ на аристокрацията. Антибактериален ефект.</div></div>
+      </div>
+      <div class="app-card">
+        <img src="https://silverbarsbg.com/wp-content/uploads/2020/09/silver-abonament-cat-min.png" alt="Инвестиционно сребро" class="app-img" onerror="this.outerHTML='<div class=\'img-ph app-img\'>Инвестиционно сребро</div>'">
+        <div class="app-body"><span class="app-tag">Инвестиции</span><div class="app-title">Сребро като актив</div><div class="app-text">XAG/USD — борсов инструмент. Популярен в периоди на икономическа несигурност.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- МЕДИЦИНА, ОГЛЕДАЛА & ХИМИЯ -->
+  <div class="section">
+    <h2 class="section-title">Медицина, Огледала &amp; Химия</h2>
+    <div class="img6">
+      <div class="app-card">
+        <img src="https://olele.bg/images/products/pravoagalno-hd-ogledalo-s-bezopasno-pokritie-58968-68ac5ad01183d.jpg" alt="Сребърно огледало" class="app-img" onerror="this.outerHTML='<div class=\'img-ph app-img\'>Огледало — Ag покритие</div>'">
+        <div class="app-body"><span class="app-tag">Оптика</span><div class="app-title">Огледала</div><div class="app-text">100–200 nm Ag слой → &gt;95% отражение. Телескопи, огледала, прожектори.</div></div>
+      </div>
+      <div class="app-card">
+        <img src="https://www.helmed.bg/media/t46s-4/2462.webp" alt="Ag наночастици — медицина" class="app-img" onerror="this.outerHTML='<div class=\'img-ph app-img\'>Сребърна медицинска превръзка</div>'">
+        <div class="app-body"><span class="app-tag">Медицина</span><div class="app-title">Превръзки &amp; катетри</div><div class="app-text">AQUACEL Ag, сребърни катетри — намаляват болнични инфекции с 30–40%.</div></div>
+      </div>
+      <div class="app-card">
+        <img src="https://radlabstudio.com/wp-content/uploads/2023/03/Studio-Kasha-73-scaled-e1678355546544.jpg" alt="AgBr — фотография" class="app-img" onerror="this.outerHTML='<div class=\'img-ph app-img\'>Аналогова фотография</div>'">
+        <div class="app-body"><span class="app-tag">Фотография</span><div class="app-title">Аналогова фотография</div><div class="app-text">AgBr/AgI в фотолентата. Въпреки дигиталния преход — нишова употреба продължава.</div></div>
+      </div>
+      <div class="app-card">
+        <img src="https://automedia.investor.bg/media/files/resized/uploadedfiles/640x0/fab/beb3a2d3384b6f2578e6da8c8dff5fab-graph.jpg" alt="Ag катализатор — нитрат" class="app-img" onerror="this.outerHTML='<div class=\'img-ph app-img\'>Ag — химичен катализатор</div>'">
+        <div class="app-body"><span class="app-tag">Химия</span><div class="app-title">Катализатор</div><div class="app-text">Ag катализира производството на формалдехид и етиленов оксид в химическата индустрия.</div></div>
+      </div>
+      <div class="app-card">
+        <img src="https://mebelrum.com/products_photos/1871/1253/new_diona_site_razrez_3.jpg" alt="Чисто сребро — текстил" class="app-img" onerror="this.outerHTML='<div class=\'img-ph app-img\'>Антибактериален текстил</div>'">
+        <div class="app-body"><span class="app-tag">Текстил</span><div class="app-title">Антибактериален текстил</div><div class="app-text">Ag нишки в спортно облекло, медицинско бельо и маски — дезодорант ефект.</div></div>
+      </div>
+      <div class="app-card">
+        <img src="https://freshwater.bg/wp-content/uploads/2024/04/FC-135-AC-12000.png" alt="Ag — пречистване на вода" class="app-img" onerror="this.outerHTML='<div class=\'img-ph app-img\'>Ag — пречистване на вода</div>'">
+        <div class="app-body"><span class="app-tag">Вода</span><div class="app-title">Пречистване на вода</div><div class="app-text">Ag в пречиствателни филтри и бойлери — предотвратява бактериален растеж.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- СВЕТОВНО ПОТРЕБЛЕНИЕ -->
+  <div class="section">
+    <h2 class="section-title">Световно потребление (2023)</h2>
+    <div class="hbox">
+      <div class="g4">
+        <div style="text-align:center;padding:1rem;">
+          <span class="usage-pct">56%</span>
+          <div style="font-size:.82rem;font-weight:700;color:var(--text-primary);">Промишленост</div>
+          <div style="font-size:.72rem;color:var(--text-secondary);">Електроника, хим., оптика</div>
+        </div>
+        <div style="text-align:center;padding:1rem;">
+          <span class="usage-pct">25%</span>
+          <div style="font-size:.82rem;font-weight:700;color:var(--text-primary);">Бижутерия</div>
+          <div style="font-size:.72rem;color:var(--text-secondary);">Украшения и прибори</div>
+        </div>
+        <div style="text-align:center;padding:1rem;">
+          <span class="usage-pct">11%</span>
+          <div style="font-size:.82rem;font-weight:700;color:var(--text-primary);">Монети</div>
+          <div style="font-size:.72rem;color:var(--text-secondary);">Инвестиционни монети</div>
+        </div>
+        <div style="text-align:center;padding:1rem;">
+          <span class="usage-pct">8%</span>
+          <div style="font-size:.82rem;font-weight:700;color:var(--text-primary);">Фотовол.</div>
+          <div style="font-size:.72rem;color:var(--text-secondary);">Слънчеви панели</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="les-notions">
+  <div class="ln-inner">
+    <div class="ln-title">Les notions</div>
+    <div class="ln-grid">
+      <div class="ln-item"><div class="ln-bg">Бижутерия</div><div class="ln-fr">Bijouterie</div></div>
+      <div class="ln-item"><div class="ln-bg">Електроника</div><div class="ln-fr">Électronique</div></div>
+      <div class="ln-item"><div class="ln-bg">Фотография</div><div class="ln-fr">Photographie</div></div>
+      <div class="ln-item"><div class="ln-bg">Медицина</div><div class="ln-fr">Médecine</div></div>
+      <div class="ln-item"><div class="ln-bg">Монета</div><div class="ln-fr">Monnaie / Pièce</div></div>
+      <div class="ln-item"><div class="ln-bg">Слънчев панел</div><div class="ln-fr">Panneau solaire</div></div>
+      <div class="ln-item"><div class="ln-bg">Огледало</div><div class="ln-fr">Miroir</div></div>
+      <div class="ln-item"><div class="ln-bg">Катализатор</div><div class="ln-fr">Catalyseur</div></div>
+      <div class="ln-item"><div class="ln-bg">Проводник</div><div class="ln-fr">Conducteur</div></div>
+      <div class="ln-item"><div class="ln-bg">Покритие</div><div class="ln-fr">Revêtement</div></div>
+      <div class="ln-item"><div class="ln-bg">Легиране</div><div class="ln-fr">Alliage</div></div>
+      <div class="ln-item"><div class="ln-bg">Инвестиция</div><div class="ln-fr">Investissement</div></div>
+    </div>
+  </div>
+</footer>
+<footer class="site-footer">Сребро (Ag) · Приложения · <a href="ecology.html">← Екология</a> · <a href="sources.html">Източници →</a></footer>
+</body>
+</html>

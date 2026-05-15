@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Разпространение в природата — Сребро (Ag)</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .map-bar { margin-bottom:.9rem; }
+    .map-bar-top { display:flex; justify-content:space-between; font-size:.82rem; margin-bottom:.3rem; }
+    .map-bar-country { color:var(--text-primary); font-weight:600; }
+    .map-bar-pct { color:var(--silver); font-weight:700; }
+    .bar-track { height:6px; background:var(--border); border-radius:3px; overflow:hidden; }
+    .bar-fill { height:100%; background:var(--silver-grad); border-radius:3px; }
+    .mineral-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; transition:all .2s; }
+    .mineral-card:hover { border-color:rgba(192,192,192,.25); transform:translateY(-2px); }
+    .mineral-card img { width:100%; height:180px; object-fit:cover; display:block; }
+    .mineral-body { padding:1rem 1.25rem; }
+    .mineral-formula { font-size:1.2rem; font-weight:800; color:var(--silver); font-family:monospace; }
+    .mineral-name { font-size:.88rem; font-weight:700; color:var(--text-primary); margin:.2rem 0 .25rem; }
+    .mineral-desc { font-size:.78rem; color:var(--text-secondary); }
+    .mineral-pct { font-size:.72rem; color:var(--silver-dark); margin-top:.35rem; }
+    .img6 { display:grid; grid-template-columns:repeat(auto-fill, minmax(210px,1fr)); gap:1.25rem; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand"><div class="brand-badge">Ag</div><span class="brand-name">СРЕБРО</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Начало</a></li>
+      <li><a href="atom.html">Атом</a></li>
+      <li><a href="nature.html" class="active">Природа</a></li>
+      <li><a href="physical.html">Физични</a></li>
+      <li><a href="chemical.html">Химични</a></li>
+      <li><a href="biology.html">Биология</a></li>
+      <li><a href="production.html">Получаване</a></li>
+      <li><a href="ecology.html">Екология</a></li>
+      <li><a href="applications.html">Приложения</a></li>
+      <li><a href="prices.html">Цени</a></li>
+      <li><a href="sources.html">Източници</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="page-header">
+  <span class="cat-badge">Категория 03</span>
+  <h1>Разпространение в природата</h1>
+  <p>Минерали, находища и географско разпределение на среброто по света.</p>
+</header>
+
+<div class="container">
+
+  <div class="stats">
+    <div class="stat"><div class="stat-val">0.07</div><div class="stat-lbl">ppm в земната кора</div></div>
+    <div class="stat"><div class="stat-val">66-та</div><div class="stat-lbl">По разпространение</div></div>
+    <div class="stat"><div class="stat-val">~27 000</div><div class="stat-lbl">тона/год. добив</div></div>
+    <div class="stat"><div class="stat-val">Mexico #1</div><div class="stat-lbl">Водещ производител</div></div>
+  </div>
+
+  <!-- СРЕБРО В ПРИРОДАТА — МНОГО СНИМКИ -->
+  <div class="section">
+    <h2 class="section-title">Сребро в природата</h2>
+    <div class="img6">
+      <div class="mineral-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Moscow_State_University_native_silver_2014-01_1389530089.JPG/960px-Moscow_State_University_native_silver_2014-01_1389530089.JPG?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20250212212213" alt="Самородно сребро" onerror="this.outerHTML='<div class=\'img-ph\' style=\'height:180px;\'>Самородно сребро</div>'">
+        <div class="mineral-body">
+          <div class="mineral-formula">Ag</div>
+          <div class="mineral-name">Самородно сребро</div>
+          <div class="mineral-desc">Рядко разклонени кристални нишки и листовидни образувания.</div>
+        </div>
+      </div>
+      <div class="mineral-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Acanthite_%28Imiter_Silver_Deposit%2C_near-latest_Neoproterozoic%2C_~550_Ma%3B_Imiter_Mine%2C_Anti-Atlas_Mountains%2C_Morocco%29_2.jpg/960px-Acanthite_%28Imiter_Silver_Deposit%2C_near-latest_Neoproterozoic%2C_~550_Ma%3B_Imiter_Mine%2C_Anti-Atlas_Mountains%2C_Morocco%29_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="Акантит Ag₂S" onerror="this.outerHTML='<div class=\'img-ph\' style=\'height:180px;\'>Аргентит Ag₂S</div>'">
+        <div class="mineral-body">
+          <div class="mineral-formula">Ag₂S</div>
+          <div class="mineral-name">Аргентит / Акантит</div>
+          <div class="mineral-desc">Основната сребърна руда. Сиво-черно минерало с метален блясък.</div>
+          <div class="mineral-pct">Съдържание Ag: ~87%</div>
+        </div>
+      </div>
+      <div class="mineral-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Proustite-209739.jpg/960px-Proustite-209739.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="Прустит" onerror="this.outerHTML='<div class=\'img-ph\' style=\'height:180px;\'>Прустит Ag₃AsS₃</div>'">
+        <div class="mineral-body">
+          <div class="mineral-formula">Ag₃AsS₃</div>
+          <div class="mineral-name">Прустит</div>
+          <div class="mineral-desc">„Светло рубинено сребро" — ярко червен кристал от Чили.</div>
+          <div class="mineral-pct">Съдържание Ag: ~65%</div>
+        </div>
+      </div>
+      <div class="mineral-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Pyrargyrite-119630.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled&_=20100426021558" alt="Пираргирит" onerror="this.outerHTML='<div class=\'img-ph\' style=\'height:180px;\'>Пираргирит Ag₃SbS₃</div>'">
+        <div class="mineral-body">
+          <div class="mineral-formula">Ag₃SbS₃</div>
+          <div class="mineral-name">Пираргирит</div>
+          <div class="mineral-desc">„Тъмно рубинено сребро" — тъмночервено-черен минерал.</div>
+          <div class="mineral-pct">Съдържание Ag: ~60%</div>
+        </div>
+      </div>
+      <div class="mineral-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Embolite-tmu35a.jpg/500px-Embolite-tmu35a.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20100528171508" alt="Цераргирит AgCl" onerror="this.outerHTML='<div class=\'img-ph\' style=\'height:180px;\'>Цераргирит AgCl</div>'">
+        <div class="mineral-body">
+          <div class="mineral-formula">AgCl</div>
+          <div class="mineral-name">Цераргирит</div>
+          <div class="mineral-desc">„Рогово сребро" — восъчно-сив минерал, мек и ковък.</div>
+          <div class="mineral-pct">Съдържание Ag: ~75%</div>
+        </div>
+      </div>
+      <div class="mineral-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Stephanite-oldeuro-119b.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled&_=20100527110757" alt="Стефанит" onerror="this.outerHTML='<div class=\'img-ph\' style=\'height:180px;\'>Стефанит Ag₅SbS₄</div>'">
+        <div class="mineral-body">
+          <div class="mineral-formula">Ag₅SbS₄</div>
+          <div class="mineral-name">Стефанит</div>
+          <div class="mineral-desc">„Крехко сребро" — черен минерал с метален блясък.</div>
+          <div class="mineral-pct">Съдържание Ag: ~68%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- СВЕТОВНО ПРОИЗВОДСТВО -->
+  <div class="section">
+    <h2 class="section-title">Световно производство</h2>
+    <div class="two-col">
+      <div>
+        <div class="map-bar"><div class="map-bar-top"><span class="map-bar-country">🇲🇽 Мексико</span><span class="map-bar-pct">23%</span></div><div class="bar-track"><div class="bar-fill" style="width:23%"></div></div></div>
+        <div class="map-bar"><div class="map-bar-top"><span class="map-bar-country">🇨🇳 Китай</span><span class="map-bar-pct">14%</span></div><div class="bar-track"><div class="bar-fill" style="width:14%"></div></div></div>
+        <div class="map-bar"><div class="map-bar-top"><span class="map-bar-country">🇵🇪 Перу</span><span class="map-bar-pct">13%</span></div><div class="bar-track"><div class="bar-fill" style="width:13%"></div></div></div>
+        <div class="map-bar"><div class="map-bar-top"><span class="map-bar-country">🇷🇺 Русия</span><span class="map-bar-pct">7%</span></div><div class="bar-track"><div class="bar-fill" style="width:7%"></div></div></div>
+        <div class="map-bar"><div class="map-bar-top"><span class="map-bar-country">🇦🇺 Австралия</span><span class="map-bar-pct">6%</span></div><div class="bar-track"><div class="bar-fill" style="width:6%"></div></div></div>
+        <div class="map-bar"><div class="map-bar-top"><span class="map-bar-country">🇵🇱 Полша</span><span class="map-bar-pct">5%</span></div><div class="bar-track"><div class="bar-fill" style="width:5%"></div></div></div>
+        <div class="map-bar"><div class="map-bar-top"><span class="map-bar-country">🌍 Останали</span><span class="map-bar-pct">32%</span></div><div class="bar-track"><div class="bar-fill" style="width:32%"></div></div></div>
+      </div>
+      <div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Aerial_View_of_Pe%C3%B1asquito_Mine.jpg/960px-Aerial_View_of_Pe%C3%B1asquito_Mine.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="Сребърна руда" style="width:100%;border-radius:var(--radius);object-fit:cover;max-height:260px;" onerror="this.outerHTML='<div class=\'img-ph\' style=\'height:260px;\'>Мина Пенясквито — Мексико</div>'">
+        <p style="font-size:.75rem;color:var(--text-muted);margin-top:.5rem;">Мина Пенясквито — Мексико, сред най-продуктивните в света</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- НАХОДИЩА И ДОБИВ — МНОГО СНИМКИ -->
+  <div class="section">
+    <h2 class="section-title">Находища и добив</h2>
+    <div class="img6">
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Cerro_ricco.jpg/960px-Cerro_ricco.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20070311175513" alt="Cerro Rico, Потоси" class="card-img" onerror="this.outerHTML='<div class=\'img-ph\'>Потоси — Боливия</div>'">
+        <div class="card-body"><div class="card-title">Потоси, Боливия</div><div class="card-text">Исторически найбогатото находище. В XVI–XVII в. е доставяло 80% от световното сребро.</div></div>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Silberbergwerk_Suggental_Josephistollen.jpg/960px-Silberbergwerk_Suggental_Josephistollen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="Сребърна мина" class="card-img" onerror="this.outerHTML='<div class=\'img-ph\'>Сребърна мина — Мексико</div>'">
+        <div class="card-body"><div class="card-title">Сакатекас, Мексико</div><div class="card-text">Мексиканският щат Сакатекас произвежда повече от 20% от световното сребро.</div></div>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Silver_mining_in_Kutn%C3%A1_Hora_1490s.jpg/500px-Silver_mining_in_Kutn%C3%A1_Hora_1490s.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20091208131700" alt="Сребърен добив исторически" class="card-img" onerror="this.outerHTML='<div class=\'img-ph\'>Открита рудна мина</div>'">
+        <div class="card-body"><div class="card-title">Открити рудници</div><div class="card-text">Повечето съвременни сребърни находища се добиват чрез открит кариерен метод.</div></div>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Giant_silver_nugget%21.png/960px-Giant_silver_nugget%21.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="Голям сребърен самородок" class="card-img" onerror="this.outerHTML='<div class=\'img-ph\'>Coeur d\'Alene — Айдахо, САЩ</div>'">
+        <div class="card-body"><div class="card-title">Coeur d'Alene, Айдахо</div><div class="card-text">Районът „Сребърна долина" в Айдахо произвежда над 1 млрд. унции сребро досега.</div></div>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Precipitation_of_Silver_on_Copper_2.jpg/960px-Precipitation_of_Silver_on_Copper_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="Ag и Cu заедно" class="card-img" onerror="this.outerHTML='<div class=\'img-ph\'>Съвместен добив с мед</div>'">
+        <div class="card-body"><div class="card-title">Страничен добив</div><div class="card-text">~70% от среброто се добива заедно с мед, олово или цинк — не от самостоятелни мини.</div></div>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/On_the_Rocks_-_silver_ring_with_raw_rock_crystal.jpg/960px-On_the_Rocks_-_silver_ring_with_raw_rock_crystal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="Сребърни кристали" class="card-img" onerror="this.outerHTML='<div class=\'img-ph\'>Сребърни кристални образци</div>'">
+        <div class="card-body"><div class="card-title">Минерален образец</div><div class="card-text">Самородното сребро образува типични нишковидни, листовидни или плочести кристали.</div></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="les-notions">
+  <div class="ln-inner">
+    <div class="ln-title">Les notions</div>
+    <div class="ln-grid">
+      <div class="ln-item"><div class="ln-bg">Минерал</div><div class="ln-fr">Minéral</div></div>
+      <div class="ln-item"><div class="ln-bg">Руда</div><div class="ln-fr">Minerai</div></div>
+      <div class="ln-item"><div class="ln-bg">Аргентит</div><div class="ln-fr">Argentite</div></div>
+      <div class="ln-item"><div class="ln-bg">Самородно сребро</div><div class="ln-fr">Argent natif</div></div>
+      <div class="ln-item"><div class="ln-bg">Находище</div><div class="ln-fr">Gisement</div></div>
+      <div class="ln-item"><div class="ln-bg">Добив</div><div class="ln-fr">Extraction minière</div></div>
+      <div class="ln-item"><div class="ln-bg">Земна кора</div><div class="ln-fr">Croûte terrestre</div></div>
+      <div class="ln-item"><div class="ln-bg">Разпространение</div><div class="ln-fr">Abondance</div></div>
+      <div class="ln-item"><div class="ln-bg">Страничен продукт</div><div class="ln-fr">Sous-produit</div></div>
+      <div class="ln-item"><div class="ln-bg">Производство</div><div class="ln-fr">Production</div></div>
+      <div class="ln-item"><div class="ln-bg">Сулфид</div><div class="ln-fr">Sulfure</div></div>
+      <div class="ln-item"><div class="ln-bg">Хлорид</div><div class="ln-fr">Chlorure</div></div>
+    </div>
+  </div>
+</footer>
+<footer class="site-footer">Сребро (Ag) · Разпространение · <a href="atom.html">← Атом</a> · <a href="physical.html">Физични →</a></footer>
+</body>
+</html>
